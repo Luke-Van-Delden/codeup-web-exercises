@@ -46,11 +46,12 @@ else if (notavail){
 
 let member = confirm("Are you a member?");
 let items = prompt("How many items are you purchasing?");
+let expired = confirm("Has the offer expired?")
 
-if (member == true){
+if ((member == true) && !expired) {
     alert("Great news! You qualify for a special promotion!");
 }
-else if (((Number(items)) >= 2) && !member){
+else if (((Number(items)) >= 2) && !member && !expired){
     alert("Great news! You qualify for a special promotion!");
 }
 else {
