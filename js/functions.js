@@ -31,7 +31,6 @@ console.log(helloMessage);
  * console.
  */
 let myName = prompt("What is your name?");
-myName;
 
 console.log(sayHello(myName));
 
@@ -116,15 +115,16 @@ alert("You should tip: $" + tipamount);
 
 
 function applyDiscount (pricebefore,discount) {
-    pricebefore = prompt("What is the price BEFORE discount?");
-    discount = prompt("What percentage is the discount? Enter as a decimal. EX. .5 = 50%");
+    do {
+        pricebefore = prompt("What is the price before discount?");
+    } while (pricebefore < 0 || pricebefore === '')
     do {
         discount = prompt("What percentage is the discount? Enter as a decimal. EX. .5 = 50%");
-    } while (discount < 0 || discount > 1)
+    } while (discount < 0 || discount > 1 || discount === '')
     let newtotal = pricebefore - (pricebefore * discount);
     return newtotal
 }
 
-alert("The price after discount is: $" + applyDiscount());''
+alert("The price after discount is: $" + applyDiscount());
 
 })()
