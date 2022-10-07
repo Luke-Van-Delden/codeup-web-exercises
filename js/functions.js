@@ -1,6 +1,6 @@
 "use strict";
 
-
+(function (){
 /**
  * TODO:
  * Create a function called 'sayHello' that takes a parameter 'name'.
@@ -125,4 +125,6 @@ function applyDiscount (pricebefore,discount) {
     return newtotal
 }
 
-alert("The price after discount is: $" + applyDiscount());
+alert("The price after discount is: $" + applyDiscount());''
+
+})()
