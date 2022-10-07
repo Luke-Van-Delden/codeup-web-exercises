@@ -82,16 +82,13 @@ console.log(isTwo(random));
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-let tippercent = prompt("What percentage would you like to tip?");
-let billtotal = prompt("What is the total cost?")
-
-
-function calculateTip (a,b){
-    return ((a/100) * b);
+function calculateTip (tippercent,billtotal){
+    tippercent = prompt("What percentage would you like to tip?");
+    billtotal = prompt("What is the total cost?");
+    return (tippercent / 100) * billtotal;
 }
 
-console.log("You should tip: $"  + calculateTip(tippercent, billtotal));
-let tipamount = calculateTip(tippercent, billtotal);
+let tipamount = calculateTip();
 
 /**
  * TODO:
@@ -117,14 +114,15 @@ alert("You should tip: $" + tipamount);
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 
-let pricebefore = prompt("What is the price BEFORE discount?");
-let discount = prompt("What percentage is the discount? Enter as a decimal. EX. .5 = 50%")
-do {
-    discount = prompt("What percentage is the discount? Enter as a decimal. EX. .5 = 50%");
-} while (discount < 0 || discount > 1)
 
-function applyDiscount (a,b) {
-    return a * b;
+function applyDiscount (pricebefore,discount) {
+    pricebefore = prompt("What is the price BEFORE discount?");
+    discount = prompt("What percentage is the discount? Enter as a decimal. EX. .5 = 50%");
+    do {
+        discount = prompt("What percentage is the discount? Enter as a decimal. EX. .5 = 50%");
+    } while (discount < 0 || discount > 1)
+    let newtotal = pricebefore - (pricebefore * discount);
+    return newtotal
 }
 
-alert("The price after discount is: $" + applyDiscount(pricebefore, discount));
+alert("The price after discount is: $" + applyDiscount());
