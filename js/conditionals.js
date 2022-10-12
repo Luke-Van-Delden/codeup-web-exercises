@@ -151,6 +151,8 @@ function calculateTotal (totalAmount){
  var luckyNumber = Math.floor(Math.random() * 6);
 let userbill = prompt("What is your total bill?")
 console.log(calculateTotal(userbill));
+
+
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -174,7 +176,6 @@ function writeanumber() {
     let isitnum = confirm("Would you like to enter a number? Click OK for 'Yes'");
     if (isitnum) {
         let usernum = prompt("Enter a number");
-        console.log((!isNaN(parseFloat(usernum))));
         if (!isNaN(parseFloat(usernum))) {
             alert("It is a number")
             if (usernum % 2 === 0) {
