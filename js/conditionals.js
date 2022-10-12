@@ -205,4 +205,41 @@ function writeanumber() {
 
 writeanumber();
 
+let userinput = prompt("Enter a number - as seperate functions");
+function isEven(){
+    if (userinput % 2 === 0) {
+        alert("This number is even");
+    } else {
+        alert("This number is odd");
+    }
+}
+
+function isPositive(){
+    if (userinput > 0) {
+        alert("This number is positive");
+    } else if (userinput < 0) {
+        alert("This number is negative");
+    } else {
+        alert("This number is 0!");
+    }
+    }
+
+function plusHundred(){
+    alert(userinput + " + 100 = " + (parseFloat(userinput) + 100));
+}
+
+function isnum() {
+    if (!isNaN(parseFloat(userinput))){
+        alert("This is a number");
+    }
+    else{
+        alert("This is not the correct data type");
+    }
+}
+
+isnum();
+isEven();
+isPositive();
+plusHundred();
+
 })()
