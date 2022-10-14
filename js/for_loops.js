@@ -7,9 +7,9 @@ function showMultiplicationTable (x) {
 showMultiplicationTable(8);
 
 for (i = 1; i < 11; i++){
-    let evenodd = "even";
+    let evenodd = "odd";
     if (i % 2 !== 0){
-        evenodd = "odd"
+        evenodd = "even"
     }
     console.log(((Math.floor(Math.random() * 181) + 20)) + " is " + evenodd);
 }
