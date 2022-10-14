@@ -32,9 +32,9 @@ for (i = 0; i < 50; i++){
 //     if (newinput >= 1 && newinput < 50) {
 //         break;
 //     }
-
-
 // } while (newinput !== true)
+
+
 // CODED NOT USING CONTINUE OR BREAK
 // let input = parseInt(prompt("What number should we stop at bewtween 1 and 50? Must enter a number."));
 // // console.log(typeof input); TESTING FOR TYPE OF INPUT
