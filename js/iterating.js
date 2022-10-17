@@ -57,7 +57,7 @@
 //     });
 
     /**
-     * TODO:
+     * TODOne:
      * Create the following three functions, each will accept an array and
      * return an an element from it
      * - first: returns the first item in the array
@@ -69,5 +69,17 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+    function first(x){
+        console.log(x[0])
+    }
 
+    function second(x) {
+        console.log(x[1])
+    }
+    function last(x) {
+        console.log(x[(x.length -1)])
+    }
+    first(names);
+    second(names);
+    last(names);
 })();
