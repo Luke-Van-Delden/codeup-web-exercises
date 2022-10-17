@@ -31,15 +31,30 @@
 
 
     /**
-     * TODO:
+     * TODOne:
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
+    for(let i = 0; i <= names.length - 1; i++){
+        console.log('Here is a name: ' + names[i] + '.');
+    }
 
     /**
-     * TODO:
+     * TODOne:
      * Refactor your above code to use a `forEach` loop
      */
+
+    names.forEach(function(name) {
+        console.log('Here is a name: ' + name + '.');
+    });
+
+//    These are helpful
+//     var shapes = ['square', 'rectangle', 'circle', 'triangle'];
+//
+// // loop through the array and log the values
+//     shapes.forEach(function(shape) {
+//         console.log('Here is a lovely shape: ' + shape + '.');
+//     });
 
     /**
      * TODO:
