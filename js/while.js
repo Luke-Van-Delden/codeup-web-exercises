@@ -19,7 +19,7 @@ do {
         break;
     }
 
-    else if (conesleft < order) {
+    else if (conesleft < 0) {
         console.log("Cannot sell you " + order + " cones I only have " + (conesleft + order) + "...");
         conesleft = conesleft + order;
     }
