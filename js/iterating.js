@@ -10,9 +10,18 @@
     let names = ["Luke", "Kara", "Frankie", "Lance"];
 
     /**
-     * TODO:
+     * TODOne:
      * Create a log statement that will log the number of elements in the names
      * array.
+     */
+
+    console.log(names.length);
+
+
+    /**
+     * TODO:
+     * Create log statements that will print each of the names individually by
+     * accessing each element's index.
      */
 
     names.forEach(function(name) {
@@ -26,11 +35,6 @@
 //         console.log('Here is a lovely shape: ' + shape + '.');
 //     });
 
-    /**
-     * TODO:
-     * Create log statements that will print each of the names individually by
-     * accessing each element's index.
-     */
 
     /**
      * TODO:
