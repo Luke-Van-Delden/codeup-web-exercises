@@ -12,7 +12,6 @@ var allCones = Math.floor(Math.random() * 50) + 50;
 let conesleft = allCones
 do {
     let order = Math.floor(Math.random() * 5) + 1
-    console.log("I have " + conesleft + " cones left!");
     conesleft = conesleft - order;
     if (conesleft == 0) {
         console.log(order + " cones sold..")
