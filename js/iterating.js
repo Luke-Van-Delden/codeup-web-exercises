@@ -19,21 +19,15 @@
 
 
     /**
-     * TODO:
+     * TODOne:
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
 
-    names.forEach(function(name) {
-        console.log('Here is a name: ' + name + '.');
-    });
-
-//     var shapes = ['square', 'rectangle', 'circle', 'triangle'];
-//
-// // loop through the array and log the values
-//     shapes.forEach(function(shape) {
-//         console.log('Here is a lovely shape: ' + shape + '.');
-//     });
+    console.log(names[0]);
+    console.log(names[1]);
+    console.log(names[2]);
+    console.log(names[3]);
 
 
     /**
