@@ -12,15 +12,19 @@ var allCones = Math.floor(Math.random() * 50) + 50;
 let conesleft = allCones
 do {
     let order = Math.floor(Math.random() * 5) + 1
+    console.log("I have " + conesleft + " cones left!");
     conesleft = conesleft - order;
-    if (conesleft > 0 && conesleft < order) {
-        console.log("Cannot sell you " + order + " cones I only have " + conesleft + "...");
-    }
-    else if (conesleft > 0){
-            console.log(order + " cones sold..")
-        }
-    else {
+    if (conesleft == 0) {
+        console.log(order + " cones sold..")
         console.log("Yay! I sold them all!");
         break;
     }
+
+    else if (conesleft < order) {
+        console.log("Cannot sell you " + order + " cones I only have " + (conesleft + order) + "...");
+        conesleft = conesleft + order;
+    }
+    else {
+        console.log(order + " cones sold..")
+        }
 } while (allCones > 0)
