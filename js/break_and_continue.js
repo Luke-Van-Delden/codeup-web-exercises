@@ -3,7 +3,7 @@ let newinput = "";
 // USING A FOR LOOP AND TESTING UP TO 10 TIMES
 for (i = 0; i < 10; i++){
     newinput = parseInt(prompt("What number should we stop at bewtween 1 and 50? Must enter a number."));
-    if (newinput >= 1 && newinput < 50) {
+    if (newinput >= 1 && newinput < 50 && newinput % 2 == 1) {
         break;
     }
 }
