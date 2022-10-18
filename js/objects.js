@@ -105,9 +105,6 @@
         {title: 'The Two Towers', author: {firstName: "JRR", lastName: "Tolkein"}},
         {title: 'Return of the King', author: {firstName: "JRR", lastName: "Tolkein"}}
         ];
-    var author = {}
-    author.firstName =
-    console.log(books[0].author.firstName)
 
     /**
      * TODO:
