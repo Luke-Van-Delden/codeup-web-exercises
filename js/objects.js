@@ -133,5 +133,32 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+function createBook (a,b,c) {
+        var a = prompt("What is the title?");
+        var b = prompt("What is the author's fist name?");
+        var c = prompt("What is the author's fist name?");
+        var newBook = [
+            {title: a, author: {first: b, last: c}}
+        ];
+        let newerbook = newBook
+        newBook.showbookInfo = function (){
+            newerbook.forEach(function(book) {
+                console.log("Book #" + (newerbook.indexOf(book) + 1))
+                console.log("Title: " + book.title)
+                console.log("Author: " + book.author.first + " " + book.author.last)
+                console.log("--------------------")
+            })
+        };
+        newBook.showbookInfo();
+
+        return newerbook
+        // cars.forEach(function(car) {
+        //     car.features.forEach(function(feature) {
+        //         console.log(feature);
+        //     });
+        // });
+    }
+
+    createBook();
 
 })();
