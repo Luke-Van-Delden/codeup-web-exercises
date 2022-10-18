@@ -66,24 +66,6 @@
     }
 
     shoppers.log();
-    // car.logMakeModel = function () {
-    //     console.log("Car make/model is: " + this.make + " " + this.model);
-    // };
-
-
-
-    // cars.forEach(function(car) {
-    //     car.features.forEach(function(feature) {
-    //         console.log(feature);
-    //     });
-    // });
-
-
-    // planetsArray.forEach(function(planet) {
-    //     if (planet !== "<ul>" && planet !== "</ul>")
-    //     planet = "<li>" + planet + "</li>";
-    //     console.log(planet);
-    // })
 
 
     /** TODOne:
@@ -106,8 +88,18 @@
         {title: 'Return of the King', author: {firstName: "JRR", lastName: "Tolkein"}}
         ];
 
+    books.log = function() {
+        books.forEach(function(book) {
+            console.log("Book #" + (books.indexOf(book) + 1))
+            console.log("Title: " + book.title)
+            console.log("Author: " + book.author.firstName + " " + book.author.lastName)
+            console.log("--------------------")
+
+        });
+    }
+    books.log();
     /**
-     * TODO:
+     * TODOne:
      * Loop through the books array and output the following information about
      * each book:
      * - the book number (use the index of the book in the array)
