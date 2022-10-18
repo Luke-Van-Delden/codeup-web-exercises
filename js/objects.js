@@ -16,8 +16,8 @@
     person.lastName = "Van Delden";
     console.log(person.firstName);
     console.log(person.lastName);
-    
-    
+
+
     /**
      * TODOne:
      * Add a sayHello method to the person object that returns a greeting using
@@ -33,7 +33,7 @@
     console.log(person.sayHello())
 
 
-    /** TODO:
+    /** TODOne:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
      * discount. Write a JS program, using conditionals, that logs to the
@@ -47,11 +47,44 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    shoppers.log = function() {
+        shoppers.forEach(function(person) {
+            if (person.amount >= 200) {
+                console.log((person.name + "is spending " + person.amount + ". Before discount: " + person.amount + ". They save $" + (person.amount * .12) + ". After Discount: " + (person.amount * .88)))
+
+            }
+            else {
+            console.log((person.name + "is spending " + person.amount + ". No discounts applicable. Price remains same."))
+            }
+        });
+    }
+
+    shoppers.log();
+    // car.logMakeModel = function () {
+    //     console.log("Car make/model is: " + this.make + " " + this.model);
+    // };
+
+
+
+    // cars.forEach(function(car) {
+    //     car.features.forEach(function(feature) {
+    //         console.log(feature);
+    //     });
+    // });
+
+
+    // planetsArray.forEach(function(planet) {
+    //     if (planet !== "<ul>" && planet !== "</ul>")
+    //     planet = "<li>" + planet + "</li>";
+    //     console.log(planet);
+    // })
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
