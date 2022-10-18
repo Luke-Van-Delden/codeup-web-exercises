@@ -86,7 +86,7 @@
     // })
 
 
-    /** TODO:
+    /** TODOne:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
      * property. The author property should be an object with properties
@@ -98,6 +98,16 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+    var books = [
+            {title: 'Harry Potter', author: {firstName: "JK", lastName: "Rowling"}},
+        {title: 'Of Mice and Men', author: {firstName: "John", lastName: "Steinbeck"}},
+        {title: 'Fellowship of the Ring', author: {firstName: "JRR", lastName: "Tolkein"}},
+        {title: 'The Two Towers', author: {firstName: "JRR", lastName: "Tolkein"}},
+        {title: 'Return of the King', author: {firstName: "JRR", lastName: "Tolkein"}}
+        ];
+    var author = {}
+    author.firstName =
+    console.log(books[0].author.firstName)
 
     /**
      * TODO:
