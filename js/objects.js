@@ -2,7 +2,7 @@
     "use strict";
 
     /**
-     * TODO:
+     * TODOne:
      * Create an object with firstName and lastName properties that are strings
      * with your first and last name. Store this object in a variable named
      * `person`.
@@ -11,7 +11,13 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-
+    var person = {}
+    person.firstName = "Luke";
+    person.lastName = "Van Delden";
+    console.log(person.firstName);
+    console.log(person.lastName);
+    
+    
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
