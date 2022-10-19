@@ -118,7 +118,7 @@
                 firstName: "JRR",
                 lastName: "Tolkein"}}
     ];
-
+// LINE BELOW NOT NEEDED
     books.log = function() {
         books.forEach(function(book) {
             console.log("Book #" + (books.indexOf(book) + 1))
