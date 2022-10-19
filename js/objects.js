@@ -39,8 +39,11 @@
      * discount. Write a JS program, using conditionals, that logs to the
      * browser, how much Ryan, Cameron and George need to pay. We know that
      * Cameron bought $180, Ryan $250 and George $320. Your program will have to
-     * display a line with the name of the person, the amount before the
-     * discount, the discount, if any, and the amount after the discount.
+     *
+     * display a line with the name of the person,
+     * the amount before the discount,
+     * the discount,
+     * if any, and the amount after the discount.
      *
      * Uncomment the lines below to create an array of objects where each object
      * represents one shopper. Use a foreach loop to iterate through the array,
@@ -53,6 +56,7 @@
         {name: 'George', amount: 320}
     ];
 
+    // assigning log unnecessary?
     shoppers.log = function() {
         shoppers.forEach(function(person) {
             if (person.amount >= 200) {
@@ -80,13 +84,40 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-    var books = [
-            {title: 'Harry Potter', author: {firstName: "JK", lastName: "Rowling"}},
-        {title: 'Of Mice and Men', author: {firstName: "John", lastName: "Steinbeck"}},
-        {title: 'Fellowship of the Ring', author: {firstName: "JRR", lastName: "Tolkein"}},
-        {title: 'The Two Towers', author: {firstName: "JRR", lastName: "Tolkein"}},
-        {title: 'Return of the King', author: {firstName: "JRR", lastName: "Tolkein"}}
-        ];
+    var books;
+    books = [
+        {
+            title: 'Harry Potter',
+            author: {
+                firstName: "JK",
+                lastName: "Rowling"
+            }
+        },
+        {
+            title: 'Of Mice and Men',
+            author: {
+                firstName: "John",
+                lastName: "Steinbeck"
+            }
+        },
+        {
+            title: 'Fellowship of the Ring',
+            author: {
+                firstName: "JRR",
+                lastName: "Tolkein"
+            }
+        },
+        {
+            title: 'The Two Towers',
+            author: {
+                firstName: "JRR",
+                lastName: "Tolkein"}},
+        {
+            title: 'Return of the King',
+            author: {
+                firstName: "JRR",
+                lastName: "Tolkein"}}
+    ];
 
     books.log = function() {
         books.forEach(function(book) {
