@@ -133,7 +133,7 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-function createBook (a,b,c) {
+function createBook () {
         var a = prompt("What is the title?");
         var b = prompt("What is the author's fist name?");
         var c = prompt("What is the author's fist name?");
@@ -149,8 +149,7 @@ function createBook (a,b,c) {
                 console.log("--------------------")
             })
         };
-        newBook.showbookInfo();
-
+       newBook.showbookInfo();
         return newerbook
         // cars.forEach(function(car) {
         //     car.features.forEach(function(feature) {
@@ -160,5 +159,6 @@ function createBook (a,b,c) {
     }
 
     createBook();
+
 
 })();
