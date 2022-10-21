@@ -12,3 +12,19 @@ function objPrice(obj){
 }
 
 console.log(objPrice(obj));
+
+const arr = ["Green", "Blue", "Periwinkles"]
+
+
+// CAN DO A for of Loop - REVIEW For of if needed
+function getLongestString(stringArray){
+    let longeststring = "";
+    for (var i = 0; i < stringArray.length; i++) {
+        if (stringArray[i].length > longeststring.length) {
+            longeststring = stringArray[i];
+        }
+    }
+    return longeststring
+}
+
+console.log(getLongestString(arr));
