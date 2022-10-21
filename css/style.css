@@ -1,7 +1,56 @@
 .fancy-header {
     color: purple;
     text-decoration: underline;
+    text-align: center;
+}
+h3 {
+    text-decoration: underline;
+    color: aquamarine;
 }
 .fancy-footer {
     font-size: 26.5px;
+}
+
+body {
+    background-image: url("frank.jpg");
+    background-size: 500px;
+    background-color: darkslategray;
+}
+
+ol {
+    list-style-type: lower-alpha;
+}
+
+li {
+    color: peachpuff;
+}
+
+ul {
+    list-style-type: upper-roman;
+}
+
+html {
+    font-family: cursive;
+}
+table, th, td {
+    color: azure;
+    border: 1px solid;
+    font-size: 25px;
+    padding: 8px;
+}
+
+a:link {
+    color:red;
+}
+
+a:visited {
+    color:peachpuff;
+}
+
+a:hover {
+    color:blue;
+}
+
+a:active {
+    color:green;
 }
