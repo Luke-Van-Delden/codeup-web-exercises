@@ -5,30 +5,58 @@ body, html {
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
+:root {
+    --border-color: lightgrey;
+}
+
 .message{
     padding: .5em;
-    border: 1px lightgrey solid;
+    border: 1px solid;
+    border-color: var(--border-color);
     margin: 1em;
     border-radius: 5px;
 }
+:root {
+    --bg-info: #D1DEFC;
+}
+:root {
+    --text-info: #352C8D;
+}
 .message-info{
-    background-color: #D1DEFC;
-    color: #352C8D
+    background-color: var(--bg-info);
+    color: var(--text-info)
 }
 
+:root {
+    --bg-error: #F5D4D7;
+}
+:root {
+    --text-error: #873946;
+}
 .message-error{
-    background-color: #F5D4D7;
-    color: #873946
+    background-color: var(--bg-error);
+    color: var(--text-error)
+}
+
+:root {
+    --bg-success: #D7F2DC;
+}
+:root {
+    --text-success: #52845B;
 }
 
 .message-success{
-    background-color: #D7F2DC;
-    color: #52845B
+    background-color: var(--bg-success);
+    color: var(--text-success)
 }
-
+:root {
+    --bg-warning: #FDFBCE;
+}
+:root {
+    --text-warning: #A29651
+}
 .message-warning{
-    background-color: #FDFBCE;
-    color: #A29651
+    background-color: var(--bg-warning);
+    color: var(--text-warning)
 
 }
- /*background-color: blue;*/
