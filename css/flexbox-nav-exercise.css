@@ -45,3 +45,15 @@ nav>ul>li:nth-of-type(5) {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
+
+.container{
+    display: flex;
+    background-color: red;
+    width: 50vw;
+    margin: auto;
+    padding: 1em;
+    position: absolute;
+    bottom: 0px;
+    left: 25%;
+    height: 10em;
+}
