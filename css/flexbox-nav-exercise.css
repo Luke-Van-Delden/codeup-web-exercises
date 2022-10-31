@@ -1,3 +1,47 @@
 body{
-    background-color: blue;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+nav >ul{
+    color: black;
+    background-color: grey;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-start;
+    font-family: 'Work Sans', sans-serif;
+}
+
+nav >ul>li {
+    margin: 0;
+}
+a {
+    display: inline-block;
+    padding: .5em;
+    text-decoration: none;
+    font-weight: bolder;
+}
+#logo {
+    padding: .2em 0;
+}
+a:visited{
+    color: black;
+}
+a:link{
+    color: black;
+}
+a:hover{
+    color: blue;
+}
+
+
+nav>ul>li:nth-of-type(5) {
+    margin: auto;
+    align-items: center;
+    font-size: 3em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
