@@ -1,6 +1,28 @@
+.navbar-collapse {
+    flex-grow: 0;
+    margin-right: auto;
+}
+.btn-outline-success {
+    color: blue;
+    border: blue solid;
+    width: 100%;
+}
+#signin {
+    margin-left: auto;
+    text-decoration: none;
+    color: black;
+}
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: blue;
+        border-color: blue;
+}
 .jumbotron {
-    background-image: url("frank.jpg");
-    background-color: #3B94D9;
+    background-image: url("../images/pizza.png");
     height: 346px;
     background-size: cover;
+}
+.jumbotron>.bg-light {
+    --bs-bg-opacity: .5;
+    background-color: var(--bs-bg-opacity)) !important;
 }
