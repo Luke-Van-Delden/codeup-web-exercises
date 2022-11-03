@@ -1,0 +1,6 @@
+.jumbotron {
+    background-image: url("frank.jpg");
+    background-color: #3B94D9;
+    height: 346px;
+    background-size: cover;
+}
