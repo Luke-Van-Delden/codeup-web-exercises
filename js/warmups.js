@@ -117,3 +117,15 @@ function FizzBuzz(){
     }
 }
 FizzBuzz();
+function getAverageHeight(arr) {
+    let total = {heightInMM: 0};
+    let average = 0;
+    for (i=0; i < arr.length; i++) {
+        total.heightInMM = (total.heightInMM + arr[i].heightInMM);
+    }
+    console.log("Total height of Hamsters = " + total.heightInMM)
+    average = total.heightInMM / (arr.length);
+    console.log("Average height = " + average);
+}
+
+getAverageHeight(hamsters);
