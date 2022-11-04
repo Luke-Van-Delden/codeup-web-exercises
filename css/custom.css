@@ -50,7 +50,7 @@
     color: black;
 }
 
-#size {
+.size {
     color: black;
     background-color: lightgrey;
 }
@@ -63,7 +63,7 @@ label {
     display: flex;
     flex-direction: column;
 }
-#next-step {
+.next-step {
     display: flex;
     justify-content: flex-end;
 }
