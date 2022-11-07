@@ -26,3 +26,4 @@ for (i = 1; i < 10; i++){
 for (i = 100; i > 0; i-=5){
     console.log(i);
 }
+

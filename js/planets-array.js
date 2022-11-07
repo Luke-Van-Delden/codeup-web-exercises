@@ -45,3 +45,12 @@
     planets.sort();
     console.log(planets);
 })();
+
+function convertNameToObject (name) {
+    let person = {}
+    person.firstName = name.substring(0, name.indexOf(" "));
+    person.lastName = name.substring(name.indexOf(" ") + 1, name.length);
+    return  person;
+}
+
+console.log(convertNameToObject("Harry Potter"))
