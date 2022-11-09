@@ -46,11 +46,13 @@
     console.log(planets);
 })();
 
-function convertNameToObject (name) {
-    let person = {}
-    person.firstName = name.substring(0, name.indexOf(" "));
-    person.lastName = name.substring(name.indexOf(" ") + 1, name.length);
-    return  person;
+function captitalizeName (string) {
+    let firstname = string.charAt(0).toUpperCase() + string.slice(1, string.indexOf(" ") + 1);
+    let lastname = string.charAt(string.indexOf(" ") + 1).toUpperCase() + string.slice(string.indexOf(" ") + 2)
+    // firstname = string.charAt(string.indexOf(" ") + 1) + string.slice(string.indexOf(" "))
+    return firstname + lastname;
+    // fullname.indexOf(" ")
+    //finds space
 }
 
-console.log(convertNameToObject("Harry Potter"))
+console.log(captitalizeName("luke thepuke"));
