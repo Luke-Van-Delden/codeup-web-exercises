@@ -34,21 +34,34 @@
 
         // TODOne: Set inner html of mainHeader to "JavaScript is Cool"
 
-        // TODO: Uncomment the next line and get the sub header element by id
-        // var subHeader = ;
+        // TODOne: Uncomment the next line and get the sub header element by id
+         var subHeader = document.getElementById('sub-header');
+         subHeader.style.color = 'blue';
 
-        // TODO: Set the text color of subHeader to blue
+        // TODOne: Set the text color of subHeader to blue
 
-        // TODO: Uncomment the next line and get all list items
-        // var listItems = ;
+        // TODOne: Uncomment the next line and get all list items
+         var listItems = document.getElementsByTagName('li');
+        for (let i = 0; i < listItems.length; i++) {
+            if (listItems[i].getAttribute("data-dbid") == 1) {
+                listItems[i].style.color = 'blue';
+            }
+           else if (i % 2 === 0) {
+                listItems[i].style.color = 'grey';
+            }
+        }
 
-        // TODO: Set text color on every other list item to grey
-        // TODO: Set text color of li with dbid = 1 to blue
 
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        // var subParagraphs = ;
 
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        // TODOne: Set text color on every other list item to grey
+        // TODOne: Set text color of li with dbid = 1 to blue
+
+        // TODOne: Uncomment the next line and get all elements with class name sub-paragraph
+         var subParagraphs = document.getElementsByClassName('sub-paragraph');
+        console.log(subParagraphs);
+
+        document.getElementsByClassName('sub-paragraph')[0].innerHTML="Mission Accomplished!";
+        // TODOne: Change the text in the first sub paragraph to "Mission Accomplished!"
     })();
 </script>
 </body>
