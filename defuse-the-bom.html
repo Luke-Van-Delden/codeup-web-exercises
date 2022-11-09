@@ -13,8 +13,6 @@
 (function() {
     "use strict";
 
-    var detonationTimer = 5;
-
     // TODO: This function needs to be called once every second
     var detonationTimer = 5;
 
@@ -32,6 +30,7 @@
     // cancel the interval/timeout for updateTimer()
     function defuseTheBOM() {
         clearInterval(intervalID);
+        alert("You've defused the bomb and saved the day!");
     }
 
     // Don't modify anything below this line!
