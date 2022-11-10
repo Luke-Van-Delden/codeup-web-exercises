@@ -94,11 +94,16 @@
 
 
         // TODOne: Uncomment the next line and get all elements with class name sub-paragraph
-         var subParagraphs = document.getElementsByClassName('sub-paragraph');
-        console.log(subParagraphs);
-
-        document.getElementsByClassName('sub-paragraph')[0].innerHTML="Mission Accomplished!";
         // TODOne: Change the text in the first sub paragraph to "Mission Accomplished!"
+        function accomplish () {
+            var subParagraphs = document.getElementsByClassName('sub-paragraph');
+            document.getElementsByClassName('sub-paragraph')[0].innerHTML="Mission Accomplished!";
+        }
+
+        var accomplishBtn = document.getElementById('missionaccomplished');
+        accomplishBtn.addEventListener('click', accomplish);
+
+
     })();
 </script>
 </body>
