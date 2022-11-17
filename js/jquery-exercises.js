@@ -1,3 +1,6 @@
 $(function() {
-    alert( 'The DOM has finished loading!' );
+    let favoriteItem = $("#favorite-item").html();
+    let leastFavorite = $("#least-favorite").html();
+    alert(favoriteItem);
+    alert(leastFavorite);
 });
