@@ -1,6 +1,3 @@
 $(function() {
-    let favoriteItem = $("#favorite-item").html();
-    let leastFavorite = $("#least-favorite").html();
-    alert(favoriteItem);
-    alert(leastFavorite);
+    let codeUp = $(".codeup").css("border", "solid 1px red")
 });
