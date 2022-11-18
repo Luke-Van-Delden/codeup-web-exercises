@@ -2,32 +2,34 @@
 
 var userInput = [];
 var konamiCode = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"];
+var blitzBigHead = ["2", "0", "0", "ArrowRight", "Enter"];
+var dinosaursForHire = ["c", "a", "ArrowLeft", "ArrowRight", "a", "b", "Enter"]
 
-$(document).keyup(function(event){
+$(document).keyup(function (event) {
     var keyStroke = event.key;
     userInput.push(keyStroke);
     console.log(event.key);
-    if (userInput.length === konamiCode.length){
+    if (userInput.length === konamiCode.length) {
         if (userInput.toString() === konamiCode.toString()) {
             $("#success").html("You have gained 30 lives and innnnnnnnfinite continues.");
-        }
-        else {
-            $("#success").html("Close but no cigar");
-            console.log(userInput);
-            console.log(konamiCode);
             userInput = [];
         }
     }
-    if (keyStroke === "Enter" && userInput.length !== konamiCode.length){
-        $("#success").html("Invalid code Entered");
+    if (userInput.length === blitzBigHead.length) {
+        if (userInput.toString() === blitzBigHead.toString()) {
+            $("#success").html("With the LATE HIT!").css("color", "firebrick");
+            $("#image").html("<a href='https://youtu.be/3IPZZvaKcV0?t=6'><img src='images/blitz.jpeg' alt='BigHead'></a>");
+            userInput = [];
+        }
+    }
+    if (userInput.length === dinosaursForHire.length) {
+        if (userInput.toString() === dinosaursForHire.toString()) {
+            $("#success").html("Dinosaurs with guns... What's cooler than that???").css("color", "firebrick");
+            $("#image").html("<a href='https://youtu.be/_AxxAJYcD64?t=160'><img src='images/Dinosaurs_For_Hire.webp' alt='BigHead'></a>");
+            userInput = [];
+        }
+    }
+    if (keyStroke === "Enter") {
         userInput = [];
     }
-    // COULD USE A COUNTER = 0, ++ ON KEYSTROKE ENTER
-    //
-    // if (series === "ArrowUp") {
-    //     $("#success").html("You have gained 30 lives and innnnnnnnfinite continues.");
-    // }
 });
-
-
-// ↑ ↑ ↓ ↓ ← → ← → B A
