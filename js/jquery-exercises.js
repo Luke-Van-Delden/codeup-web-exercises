@@ -1,5 +1,5 @@
 $("h1").click(function() {
-    $("h1").css("background-color", "firebrick");
+    $(this).css("background-color", "firebrick");
 });
 
 $("p").dblclick(function() {
