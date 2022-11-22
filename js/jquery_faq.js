@@ -1,5 +1,5 @@
 // SELECTS ALL DD ELEMENTS PER EXERCISE
-$("dt").click(function () {
+$(".button1").click(function () {
     $('dd').toggleClass("invisible")
 });
 
