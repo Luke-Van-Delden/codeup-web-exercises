@@ -18,6 +18,7 @@
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
+<span style="border: solid 1px black; background-color: firebrick" id="refresh">Refresh!</span>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -40,16 +41,45 @@
                 return tablecontents
             }
 
-        function createhtml(data) {
-            var html = '';
-            for (let i = 0; i < data.length; i++) {
-                html += tablemaker(data[i])
+            function createhtml(data) {
+                var html = '';
+                for (let i = 0; i < data.length; i++) {
+                    html += tablemaker(data[i])
+                }
+                return html
             }
-            return html
-        }
-        $('#insertProducts').html(createhtml(data))
+
+            $('#insertProducts').html(createhtml(data))
 
         })
+
+        $("#refresh").click(function () {
+            $.get("data/inventory.json").done(function (data) {
+                console.log(data);
+
+                function tablemaker(data) {
+                    var tablecontents = '<tr>'
+                    tablecontents += '<td>' + data.title + '</td>';
+                    tablecontents += '<td>' + data.quantity + '</td>';
+                    tablecontents += '<td>' + data.price + '</td>';
+                    tablecontents += '<td>' + data.categories + '</td>';
+                    tablecontents += '</tr>';
+                    console.log(tablecontents)
+                    return tablecontents
+                }
+
+                function createhtml(data) {
+                    var html = '';
+                    for (let i = 0; i < data.length; i++) {
+                        html += tablemaker(data[i])
+                    }
+                    return html
+                }
+
+                $('#insertProducts').html(createhtml(data))
+
+            })
+        });
 
         // $("#insertProducts").html('<tr><td>' + data[i].title + '</td></tr>');
 
