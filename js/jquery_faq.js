@@ -16,7 +16,9 @@ $("dt").click(function () {
 
 
 $(".button2").click(function () {
-        $('li:nth-child(4)').toggleClass('yellowbackground');
+    $('ul').each(function() {
+            $(this).children().last().toggleClass('yellowbackground');
+        })
 });
 
 $("h3").click(function () {
