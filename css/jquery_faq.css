@@ -8,4 +8,13 @@
 
 .button1 {
     background-color: firebrick;
+    border: solid black 1px;
+}
+.button2 {
+    background-color: firebrick;
+    border: solid black 1px;
+}
+
+.yellowbackground {
+    background-color: yellow;
 }

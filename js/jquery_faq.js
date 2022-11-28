@@ -13,3 +13,17 @@ $("dt").click(function () {
 // $("dt").click(function () {
 //     $(this).next().toggleClass("invisible")
 // });
+
+
+$(".button2").click(function () {
+        $('li:nth-child(4)').toggleClass('yellowbackground');
+});
+
+$("h3").click(function () {
+    $(this).next().css('font-weight', 'bold');
+});
+
+$("li").click(function () {
+    $(this).parent().children().first().css('color', 'blue');
+});
+
