@@ -5,7 +5,7 @@
     <title>Ajax Blog</title>
 </head>
 <body>
-<div class="posts">test</div>
+<div class="posts"></div>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
@@ -15,32 +15,28 @@
             // console.log(data);
 
             function blogmaker(data) {
-                var html = ''
-                html += '<p>' + data.title + '</p>';
-                html += '<p>' + data.date + '</p>';
-                html += '<p>' + data.content + '</p>';
-                html += '<p>' + data.categories + '</p>';
-                console.log(html)
-                return html
+                var htmlmaker = ''
+                htmlmaker += '<h3>' + data.title + '</h3>';
+                htmlmaker += '<h4>' + data.date + '</h4>';
+                htmlmaker += '<p>' + data.content + '</p>';
+                htmlmaker += '<div>' + data.categories + '</div>';
+                // console.log(htmlmaker)
+                return htmlmaker
             }
 
-            function createhtml(data) {
+            function bloghtml(data) {
                 var html = '';
                 for (let i = 0; i < data.length; i++) {
                     html += blogmaker(data[i])
                 }
+                console.log(html)
                 return html
             }
 
-            $('#posts').html(createhtml(data));
-
+            $('.posts').html(bloghtml(data));
         })
     })();
 
-
 </script>
-
-<!--    Use Ajax to load the contents of blog.json and add the data from it to your #posts div.-->
-<!--    Add additional entries to blog.json and make sure your changes are reflected on the page.-->
 </body>
 </html>
