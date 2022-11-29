@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Blog</title>
+</head>
+<body>
+<div class="posts">test</div>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    (function () {
+        "use strict";
+        $.get("data/blog.json").done(function (data) {
+            // console.log(data);
+
+            function blogmaker(data) {
+                var html = ''
+                html += '<p>' + data.title + '</p>';
+                html += '<p>' + data.date + '</p>';
+                html += '<p>' + data.content + '</p>';
+                html += '<p>' + data.categories + '</p>';
+                console.log(html)
+                return html
+            }
+
+            function createhtml(data) {
+                var html = '';
+                for (let i = 0; i < data.length; i++) {
+                    html += blogmaker(data[i])
+                }
+                return html
+            }
+
+            $('#posts').html(createhtml(data));
+
+        })
+    })();
+
+
+</script>
+
+<!--    Use Ajax to load the contents of blog.json and add the data from it to your #posts div.-->
+<!--    Add additional entries to blog.json and make sure your changes are reflected on the page.-->
+</body>
+</html>
