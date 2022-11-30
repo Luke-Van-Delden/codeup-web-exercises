@@ -28,13 +28,74 @@
 
 <!-- Custom JS -->
 <script>
+
+  var allRest = [
+    {
+      name: "Golden Dragon",
+      location: [-98.52921778721883, 29.54246088109029],
+      genre: "Chinese",
+      favorite: "Sesame Chicken",
+      fancy: "to-go only"
+    }
+    ,
+    {
+      name: "Alamo Cafe",
+      location: [-98.56639349278312, 29.53400714410293],
+      genre: "Mexican",
+      favorite: "Beef Fajitas",
+      fancy: "casual"
+    },
+    {
+      name: "Chama Gaucha",
+      location: [-98.49776993142787, 29.610348803763284],
+      genre: "Steakhouse",
+      favorite: "Bottom Sirloin",
+      fancy: "fancy"
+    },
+    {
+      name: "Melting Pot",
+      location: [-98.5147339355575, 29.578811916560774],
+      genre: "Fondue",
+      favorite: "Dessert",
+      fancy: "Fancy with a capital F"
+    }
+  ]
+
   mapboxgl.accessToken = mapBoxKey;
   var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v9',
-    zoom: 10,
-    center: [-98.4916, 29.4252]
+    zoom: 15,
+    center: [-98.52921778721883, 29.54246088109029]
   });
+
+  function displayInfo(x) {
+    const marker = new mapboxgl.Marker()
+            .setLngLat(x.location)
+            .addTo(map);
+    const pop = new mapboxgl.Popup()
+            .setHTML("<p style='font-weight: bold'>" + x.name + ' is in the ' + x.genre + ' genre. My favorite dish there is ' + x.favorite + ' and it is ' + x.fancy + ".</p>")
+    marker.setPopup(pop);
+    console.log(x.name);
+    console.log(x.location);
+    console.log(x.genre);
+    console.log(x.favorite);
+    console.log(x.fancy);
+  }
+
+  // FOR EACH FUNCTION CALLED
+  allRest.forEach(displayInfo);
+
+
+
+
+
+
+  // var popup = new mapboxgl.Popup()
+  //         .setLngLat([-98.52921778721883, 29.54246088109029])
+  //         .setHTML("<p style='font-weight: bold; font-size: 24px; color: darkgoldenrod'>Golden Dragon Express</p>")
+  //         .addTo(map)
+
 </script>
 </body>
 </html>
