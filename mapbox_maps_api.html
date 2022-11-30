@@ -42,7 +42,7 @@
       genre: "Chinese",
       favorite: "Sesame Chicken",
       fancy: "to-go only",
-      picture: '<img style="height: 350px; width: 350px" src="images/goldendragon.avif" alt="melting pot">'
+      picture: '<img style="height: 50vh; width: 50vw" src="images/goldendragon.avif" alt="melting pot">'
     }
     ,
     {
@@ -51,7 +51,7 @@
       genre: "Mexican",
       favorite: "Beef Fajitas",
       fancy: "casual",
-      picture: '<img style="height: 350px; width: 350px" src="images/almaocafe.jpeg" alt="melting pot">'
+      picture: '<img style="height: 50vh; width: 50vw" src="images/almaocafe.jpeg" alt="melting pot">'
 
     },
     {
@@ -60,7 +60,7 @@
       genre: "Steakhouse",
       favorite: "Bottom Sirloin",
       fancy: "fancy",
-      picture: '<img style="height: 350px; width: 350px" src="images/chama.png" alt="melting pot">'
+      picture: '<img style="height: 50vh; width: 50vw" src="images/chama.png" alt="melting pot">'
 
     },
     {
@@ -69,7 +69,7 @@
       genre: "Fondue",
       favorite: "Dessert",
       fancy: "Fancy with a capital F",
-      picture: '<img style="height: 350px; width: 350px" src="images/meltingpot.jpeg" alt="melting pot">'
+      picture: '<img style="height: 50vh; width: 50vw" src="images/meltingpot.jpeg" alt="melting pot">'
     }
   ]
 
@@ -94,7 +94,7 @@
             .setLngLat(x.location)
             .addTo(map);
     const pop = new mapboxgl.Popup()
-            .setHTML("<p style='font-weight: bold; font-size: 16px; text-align: center'>" + x.name + ' is in the ' + x.genre + ' genre. My favorite dish there is ' + x.favorite + ' and it is ' + x.fancy + ".</p> <br> " + x.picture)
+            .setHTML("<p style='font-weight: bold; font-size: 16px; text-align: center; display: inline-block'>" + x.name + ' is in the ' + x.genre + ' genre. My favorite dish there is ' + x.favorite + ' and it is ' + x.fancy + ".</p><br><div>" + x.picture + '</div>')
     marker.setPopup(pop);
     console.log(x.name);
     console.log(x.location);
