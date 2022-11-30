@@ -18,16 +18,36 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+#button5 {
+  background-color: green;
+  border: solid 1px black;
+}
+    #button10 {
+      background-color: blue;
+      border: solid 1px black;
+    }#button15 {
+       background-color: red;
+       border: solid 1px black;
+     }#button20 {
+        background-color: yellow;
+        border: solid 1px black;
+      }
   </style>
 </head>
 <body>
 
 <h1>My First Mapbox Map!</h1>
+<button id="button5">Zoom 5</button>
+<button id="button10">Zoom 10</button>
+<button id="button15">Zoom 15</button>
+<button id="button20">Zoom 20</button>
+
 
 <!-- The HTML element that serves as the Mapbox container -->
 <div id='map'></div>
 
 <!-- Mapbox JS -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 <script src="js/keys.js"></script>
 <script src="js/mapbox_functions.js"></script>
@@ -80,6 +100,8 @@
     zoom: 15,
     center: [-98.52921778721883, 29.54246088109029],
   });
+
+  // Adds location services for user
   map.addControl(new mapboxgl.GeolocateControl({
     positionOptions: {
       enableHighAccuracy: true
@@ -87,8 +109,10 @@
     trackUserLocation: true,
     showUserHeading: true
   }));
+  //adds default navigation to top right
+  map.addControl(new mapboxgl.NavigationControl());
 
-
+  // function to create a marker
   function displayInfo(x) {
     const marker = new mapboxgl.Marker()
             .setLngLat(x.location)
@@ -102,20 +126,22 @@
     console.log(x.favorite);
     console.log(x.fancy);
   }
-
-  // FOR EACH FUNCTION CALLED
+  //Calling the function to make markers
   allRest.forEach(displayInfo);
 
-
-
-
-
-
-  // var popup = new mapboxgl.Popup()
-  //         .setLngLat([-98.52921778721883, 29.54246088109029])
-  //         .setHTML("<p style='font-weight: bold; font-size: 24px; color: darkgoldenrod'>Golden Dragon Express</p>")
-  //         .addTo(map)
-
+  // Setting Zoom buttons
+  $('#button5').click(function () {
+    map.setZoom(5);
+    });
+  $('#button10').click(function () {
+    map.setZoom(10);
+  });
+  $('#button15').click(function () {
+    map.setZoom(15);
+  });
+  $('#button20').click(function () {
+    map.setZoom(20);
+  });
 </script>
 </body>
 </html>
