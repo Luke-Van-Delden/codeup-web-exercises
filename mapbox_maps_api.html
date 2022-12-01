@@ -1,53 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>First Mapbox Map</title>
-  <!-- Mapbox CSS -->
-  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
-  <!-- Custom CSS -->
-  <style>
-    #map {
-      /* the width and height may be set to any size */
-      width: 100%;
-      height: 700px;
-    }
-.mapboxgl-popup-content {
-  background-color: lightcyan;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-#button5 {
-  background-color: green;
-  border: solid 1px black;
-}
-    #button10 {
-      background-color: blue;
-      border: solid 1px black;
-    }#button15 {
-       background-color: red;
-       border: solid 1px black;
-     }#button20 {
-        background-color: yellow;
-        border: solid 1px black;
-      }
-  </style>
+    <meta charset="UTF-8">
+    <title>First Mapbox Map</title>
+    <!--  Adding bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Mapbox CSS -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
+    <!-- Custom CSS -->
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 700px;
+        }
+
+        .mapboxgl-popup-content {
+            background-color: lightcyan;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .button{
+          font-size: 1.5em;
+        }
+        #heading{
+          font-size: 1.5em;
+          font-weight: bold;
+        }
+        #button5 {
+            background-color: green;
+            border: solid 1px black;
+        }
+
+        #button10 {
+            background-color: blue;
+            border: solid 1px black;
+        }
+
+        #button15 {
+            background-color: red;
+            border: solid 1px black;
+        }
+
+        #button20 {
+            background-color: yellow;
+            border: solid 1px black;
+        }
+    </style>
 </head>
 <body>
-
-<h1>My First Mapbox Map!</h1>
-<button id="button5">Zoom 5</button>
-<button id="button10">Zoom 10</button>
-<button id="button15">Zoom 15</button>
-<button id="button20">Zoom 20</button>
-
+<div class="row">
+<div class="d-flex" id="topbar">
+    <span id="heading">My First Mapbox Map</span>
+    <button class="button" id="button5">Zoom 5</button>
+    <button class="button" id="button10">Zoom 10</button>
+    <button class="button" id="button15">Zoom 15</button>
+    <button class="button" id="button20">Zoom 20</button>
+    <form class="flex-grow-1" action="/action_page.php">
+        <input type="search" id="gsearch" name="gsearch">
+        <input type="submit">
+    </form>
+</div>
+</div>
 
 <!-- The HTML element that serves as the Mapbox container -->
 <div id='map'></div>
 
 <!-- Mapbox JS -->
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 <script src="js/keys.js"></script>
 <script src="js/mapbox_functions.js"></script>
@@ -55,93 +79,95 @@
 <!-- Custom JS -->
 <script>
 
-  var allRest = [
-    {
-      name: "Golden Dragon",
-      location: [-98.52921778721883, 29.54246088109029],
-      genre: "Chinese",
-      favorite: "Sesame Chicken",
-      fancy: "to-go only",
-      picture: '<img style="height: 50vh; width: 50vw" src="images/goldendragon.avif" alt="melting pot">'
-    }
-    ,
-    {
-      name: "Alamo Cafe",
-      location: [-98.56639349278312, 29.53400714410293],
-      genre: "Mexican",
-      favorite: "Beef Fajitas",
-      fancy: "casual",
-      picture: '<img style="height: 50vh; width: 50vw" src="images/almaocafe.jpeg" alt="melting pot">'
+    var allRest = [
+        {
+            name: "Golden Dragon",
+            location: [-98.52921778721883, 29.54246088109029],
+            genre: "Chinese",
+            favorite: "Sesame Chicken",
+            fancy: "to-go only",
+            picture: '<img style="height: 50vh; width: 50vw" src="images/goldendragon.avif" alt="melting pot">'
+        }
+        ,
+        {
+            name: "Alamo Cafe",
+            location: [-98.56639349278312, 29.53400714410293],
+            genre: "Mexican",
+            favorite: "Beef Fajitas",
+            fancy: "casual",
+            picture: '<img style="height: 50vh; width: 50vw" src="images/almaocafe.jpeg" alt="melting pot">'
 
-    },
-    {
-      name: "Chama Gaucha",
-      location: [-98.49776993142787, 29.610348803763284],
-      genre: "Steakhouse",
-      favorite: "Bottom Sirloin",
-      fancy: "fancy",
-      picture: '<img style="height: 50vh; width: 50vw" src="images/chama.png" alt="melting pot">'
+        },
+        {
+            name: "Chama Gaucha",
+            location: [-98.49776993142787, 29.610348803763284],
+            genre: "Steakhouse",
+            favorite: "Bottom Sirloin",
+            fancy: "fancy",
+            picture: '<img style="height: 50vh; width: 50vw" src="images/chama.png" alt="melting pot">'
 
-    },
-    {
-      name: "Melting Pot",
-      location: [-98.5147339355575, 29.578811916560774],
-      genre: "Fondue",
-      favorite: "Dessert",
-      fancy: "Fancy with a capital F",
-      picture: '<img style="height: 50vh; width: 50vw" src="images/meltingpot.jpeg" alt="melting pot">'
-    }
-  ]
+        },
+        {
+            name: "Melting Pot",
+            location: [-98.5147339355575, 29.578811916560774],
+            genre: "Fondue",
+            favorite: "Dessert",
+            fancy: "Fancy with a capital F",
+            picture: '<img style="height: 50vh; width: 50vw" src="images/meltingpot.jpeg" alt="melting pot">'
+        }
+    ]
 
-  mapboxgl.accessToken = mapBoxKey;
-  var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
-    zoom: 10,
-    center: [-98.52921778721883, 29.54246088109029],
-  });
+    // Creates map zoomed out, centered around golden dragon
+    mapboxgl.accessToken = mapBoxKey;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        center: [-98.52921778721883, 29.54246088109029],
+    });
 
-  // Adds location services for user
-  map.addControl(new mapboxgl.GeolocateControl({
-    positionOptions: {
-      enableHighAccuracy: true
-    },
-    trackUserLocation: true,
-    showUserHeading: true
-  }));
-  //adds default navigation to top right
-  map.addControl(new mapboxgl.NavigationControl());
+    // Adds location services for user
+    map.addControl(new mapboxgl.GeolocateControl({
+        positionOptions: {
+            enableHighAccuracy: true
+        },
+        trackUserLocation: true,
+        showUserHeading: true
+    }));
+    //adds default navigation to top right
+    map.addControl(new mapboxgl.NavigationControl());
 
-  // function to create a marker
-  function displayInfo(x) {
-    const marker = new mapboxgl.Marker()
+    // function to create a marker
+    function displayInfo(x) {
+        const marker = new mapboxgl.Marker()
             .setLngLat(x.location)
             .addTo(map);
-    const pop = new mapboxgl.Popup()
+        const pop = new mapboxgl.Popup()
             .setHTML("<p style='font-weight: bold; font-size: 16px; text-align: center; display: inline-block'>" + x.name + ' is in the ' + x.genre + ' genre. My favorite dish there is ' + x.favorite + ' and it is ' + x.fancy + ".</p><br><div>" + x.picture + '</div>')
-    marker.setPopup(pop);
-    console.log(x.name);
-    console.log(x.location);
-    console.log(x.genre);
-    console.log(x.favorite);
-    console.log(x.fancy);
-  }
-  //Calling the function to make markers
-  allRest.forEach(displayInfo);
+        marker.setPopup(pop);
+        console.log(x.name);
+        console.log(x.location);
+        console.log(x.genre);
+        console.log(x.favorite);
+        console.log(x.fancy);
+    }
 
-  // Setting Zoom buttons
-  $('#button5').click(function () {
-    map.setZoom(5);
+    //Calling the function to make markers
+    allRest.forEach(displayInfo);
+
+    // Setting Zoom buttons
+    $('#button5').click(function () {
+        map.setZoom(5);
     });
-  $('#button10').click(function () {
-    map.setZoom(10);
-  });
-  $('#button15').click(function () {
-    map.setZoom(15);
-  });
-  $('#button20').click(function () {
-    map.setZoom(20);
-  });
+    $('#button10').click(function () {
+        map.setZoom(10);
+    });
+    $('#button15').click(function () {
+        map.setZoom(15);
+    });
+    $('#button20').click(function () {
+        map.setZoom(20);
+    });
 </script>
 </body>
 </html>
