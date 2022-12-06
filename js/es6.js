@@ -88,7 +88,7 @@ users.forEach(function(user) {
   // developers.push(name + '\'s email is ' + email + name + ' knows ' + languages.join(', '));
   developers.push(`${name}'s email is ${email}. ${name} knows ${languages.join(', ')}`);
 });
-console.log(developers)
+// console.log(developers)
 
 // TODOne: Use `let` for the following variable
 let list = '<ul>';
@@ -102,7 +102,6 @@ for (let developer of developers){
 // });
 
   list +=`<li>${developer}</li>`;
-}
-]
+};
 
 document.querySelector('#insert').innerHTML += list;
