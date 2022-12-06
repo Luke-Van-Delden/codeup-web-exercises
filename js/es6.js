@@ -62,6 +62,10 @@ let names = [];
 //   return names.push(user.name);
 // });
 
+// One line from david
+// users.forEach(({email}) => emails.push(email));
+
+
 const pushEmail = user => emails.push(user.email);
 users.forEach(pushEmail);
 const pushNames = user => names.push(user.name);
