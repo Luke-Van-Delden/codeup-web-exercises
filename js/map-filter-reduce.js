@@ -45,10 +45,12 @@ const users = [
 // console.log(userEmails);
 
 // Reduce to find total years, then divide to find the average
-// const totalYears = users.reduce((runningTotal, user) => {
-//     runningTotal += user.yearsOfExperience
-//     return runningTotal
-// }, 0);
+    const totalYears = users.reduce((runningTotal, user) => {
+        runningTotal += user.yearsOfExperience
+        return runningTotal
+    }, 0) / users.length;
+console.log(totalYears);
+
 //
 // const averageYears = totalYears / users.length
 // console.log(averageYears)
