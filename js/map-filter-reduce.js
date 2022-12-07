@@ -35,3 +35,55 @@ const users = [
         yearsOfExperience: 9
     }
 ];
+
+// Create list of users who know more than 3 languages
+// const moreThanThree = users.filter(user => user.languages.length >2);
+// console.log(moreThanThree);
+
+// Create list of user emails using map
+// const userEmails = users.map(user => user.email);
+// console.log(userEmails);
+
+// Reduce to find total years, then divide to find the average
+// const totalYears = users.reduce((runningTotal, user) => {
+//     runningTotal += user.yearsOfExperience
+//     return runningTotal
+// }, 0);
+//
+// const averageYears = totalYears / users.length
+// console.log(averageYears)
+
+// Reduce to find the longest email
+// const longestEmail = users.reduce((longEmail, user) => {
+//     if (longEmail.email.length < user.email.length){
+//         longEmail = user
+//     }
+//     return longEmail
+// }, {email: ""});
+// console.log(longestEmail);
+
+// Create a string of all names on single string
+// const allNames = users.reduce((names, user) => {
+//     if (names === ""){
+//         names += "Your instructors are: " + user.name + ", "
+//         return names
+//     }
+//     else{
+//         names += user.name + ", "
+//         return names
+//     }
+// }, "");
+// console.log(allNames)
+
+
+// BONUS - Finding total # of unique languages
+//     const languageCount = users.reduce((totalLang, user) => {
+//         for(language of user.languages){
+//             if(totalLang.indexOf(language) === -1) {
+//                 totalLang.push(language)
+//             }
+//         }
+//         return totalLang
+//     }, []);
+//
+// console.log(`Total unique languages: ${languageCount.length}`)
