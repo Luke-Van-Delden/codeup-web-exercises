@@ -77,13 +77,13 @@ const users = [
 
 
 // BONUS - Finding total # of unique languages
-//     const languageCount = users.reduce((totalLang, user) => {
-//         for(language of user.languages){
-//             if(totalLang.indexOf(language) === -1) {
-//                 totalLang.push(language)
-//             }
-//         }
-//         return totalLang
-//     }, []);
-//
-// console.log(`Total unique languages: ${languageCount.length}`)
+    const languageCount = users.reduce((totalLang, user) => {
+        for(language of user.languages){
+            if(totalLang.indexOf(language) === -1) {
+                totalLang.push(language)
+            }
+        }
+        return totalLang
+    }, []);
+
+console.log(`Total unique languages: ${languageCount}`)
