@@ -2,17 +2,23 @@
 // promise.then(response => response.json())
 //     .then(data => console.log(data));
 
-    const promise = fetch('https://api.github.com/repos/Luke-Van-Delden/codeup-web-exercises/commitsgit', {headers: {'Authorization': gitKey}})
-promise.then(response => response.json())
-    .then(data => console.log(data));
+// const promise = fetch('https://api.github.com/repos/Luke-Van-Delden/codeup-web-exercises/commits', {headers: {'Authorization': gitKey}})
+// promise.then(response => response.json())
+//     .then(data => console.log(data[0].commit.author.date))
 
-// fetch('https://api.github.com/luke-van-delden').then( response => {
-//     response.json().then( users => {
-//             // do something with each user object...
-//             console.log(user);
-//         });
-//     });
-// });
+document.getElementById("submit").addEventListener("click", searchFor);
+
+function searchFor (e){
+    e.preventDefault()
+    let value = document.getElementById('searchbutton');
+    var lastcommit = document.getElementById('lastcommit');
+    const promise = fetch('https://api.github.com/repos/'+value.value+'/codeup-web-exercises/commits', {headers: {'Authorization': gitKey}})
+    promise.then(response => response.json())
+        .then(data => lastcommit.innerText = (data[0].commit.author.date))
+}
+// let value = document.getElementById('searchbutton')
+// console.log(value.value)
+
 
 // Create a function that accepts a GitHub username, and returns a promise that resolves returning just the date of the last commit that user made. Reference the github api documentation to achieve this.
 
