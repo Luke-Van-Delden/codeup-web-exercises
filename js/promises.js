@@ -1,10 +1,11 @@
 // const promise = fetch('https://api.github.com/users/luke-van-delden', {headers: {'Authorization': gitKey}})
 // promise.then(response => response.json())
 //     .then(data => console.log(data));
-
-// const promise = fetch('https://api.github.com/repos/Luke-Van-Delden/codeup-web-exercises/commits', {headers: {'Authorization': gitKey}})
+//
+// const promise = fetch('https://api.github.com/users/Luke-Van-Delden', {headers: {'Authorization': gitKey}})
+//
 // promise.then(response => response.json())
-//     .then(data => console.log(data[0].commit.author.date))
+//     .then(data => console.log(data))
 
 document.getElementById("submit").addEventListener("click", searchFor);
 
@@ -14,7 +15,11 @@ function searchFor (e){
     var lastcommit = document.getElementById('lastcommit');
     const promise = fetch('https://api.github.com/repos/'+value.value+'/codeup-web-exercises/commits', {headers: {'Authorization': gitKey}})
     promise.then(response => response.json())
-        .then(data => lastcommit.innerText = (data[0].commit.author.date))
+        .then(data => lastcommit.innerText = ('Date of last commit: ' + data[0].commit.author.date))
+        .catch(error => {
+            lastcommit.innerText = (`I'm sorry, we couldn't locate a user by the name of ${value.value}.\n Check to make sure you have the correct spelling.\nConsole log has additional error information.`)
+            console.log(error)
+        });
 }
 // let value = document.getElementById('searchbutton')
 // console.log(value.value)
