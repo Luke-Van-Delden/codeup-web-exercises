@@ -1,4 +1,8 @@
-const promise = fetch('https://api.github.com/users/luke-van-delden', {headers: {'Authorization': gitKey}})
+// const promise = fetch('https://api.github.com/users/luke-van-delden', {headers: {'Authorization': gitKey}})
+// promise.then(response => response.json())
+//     .then(data => console.log(data));
+
+    const promise = fetch('https://api.github.com/repos/Luke-Van-Delden/codeup-web-exercises/commitsgit', {headers: {'Authorization': gitKey}})
 promise.then(response => response.json())
     .then(data => console.log(data));
 
