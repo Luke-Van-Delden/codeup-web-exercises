@@ -45,24 +45,31 @@ const users = [
 // console.log(userEmails);
 
 // Reduce to find total years, then divide to find the average
-    const totalYears = users.reduce((runningTotal, user) => {
-        runningTotal += user.yearsOfExperience
-        return runningTotal
-    }, 0) / users.length;
-console.log(totalYears);
+//     const totalYears = users.reduce((runningTotal, user) => {
+//         runningTotal += user.yearsOfExperience
+//         return runningTotal
+//     }, 0) / users.length;
+// console.log(totalYears);
+//
+// const davidYears = users.reduce((total, user) => total + user.yearsOfExperience, 0) / users.length;
+// console.log(davidYears);
+
 
 //
 // const averageYears = totalYears / users.length
 // console.log(averageYears)
 
 // Reduce to find the longest email
-// const longestEmail = users.reduce((longEmail, user) => {
-//     if (longEmail.email.length < user.email.length){
-//         longEmail = user
-//     }
-//     return longEmail
-// }, {email: ""});
-// console.log(longestEmail);
+
+// TODO: Use third parameter for index future reference
+const longestEmail = users.reduce((longEmail, user) => {
+    if (longEmail.email.length < user.email.length){
+        longEmail = user
+    }
+    return longEmail
+}, {email: ""});
+console.log(longestEmail);
+
 
 // Create a string of all names on single string
 // const allNames = users.reduce((names, user) => {

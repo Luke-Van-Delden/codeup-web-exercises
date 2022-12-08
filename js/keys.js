@@ -1,1 +1,2 @@
 var mapBoxKey = 'pk.eyJ1IjoibHVrZXZkOTAiLCJhIjoiY2xiMnF0ZmNhMDc0ZTNvbzBiZHRtMnluYiJ9.P10QTzVobAuMfzWIHRkvgw';
+var gitKey = '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'
